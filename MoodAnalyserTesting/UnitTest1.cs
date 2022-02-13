@@ -8,14 +8,14 @@ namespace MoodAnalyserTesting
     public class UnitTest1
     {
         [TestMethod]
+        [TestCategory("Happy Mood")]
         public void GivenMessageShouldReturnHappy()
         {
             ///Follow AAA strategy
             ///Arrange , Act and in last Assert
-            AnalyzeMood mood = new AnalyzeMood();
-            string message = "I am in Happy Mood";
+            AnalyzeMood mood = new AnalyzeMood("I am in Happy Mood");
             string excepted = "happy";
-            var actual = mood.Mood(message);
+            var actual = mood.Mood();
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
@@ -24,10 +24,9 @@ namespace MoodAnalyserTesting
         {
             ///Follow AAA strategy
             ///Arrange , Act and in last Assert
-            AnalyzeMood mood = new AnalyzeMood();
-            string message = "I am in SAD Mood";
+            AnalyzeMood mood = new AnalyzeMood("I am in SAD Mood");
             string excepted = "sad";
-            var actual = mood.Mood(message);
+            var actual = mood.Mood();
             Assert.AreEqual(excepted, actual);
         }
     }
