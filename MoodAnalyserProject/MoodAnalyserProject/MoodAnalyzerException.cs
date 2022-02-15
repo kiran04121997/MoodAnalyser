@@ -10,9 +10,6 @@ namespace MoodAnalyserProject
     public class MoodAnalyzerException : Exception
     {
         public ExceptionType type;
-
-        public static object ExceptionTypes { get; internal set; }
-
         //Enumeration
         public enum ExceptionType
         {
