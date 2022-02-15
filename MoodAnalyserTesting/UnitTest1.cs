@@ -166,17 +166,6 @@ namespace MoodAnalyserTesting
                 Assert.AreEqual(expected, e.Message);
             }
         }
-        /// <summary>
-        /// UC5-Refactor dry principle
-        /// </summary>
-        [TestMethod]
-        [TestCategory("Reflection")]
-        public void GivenMoodAnalyserOptionalVarible_ShouldReturnObject()
-        {
-            object expected = new AnalyzeMood("I am Parameter constructor");
-            object actual = MoodAnalyzerFactory.CreateMoodAnalyserOptionalVariable("MoodAnalyserProblem.MoodAnalyser", "MoodAnalyser", "I am Parameter constructor");
-            expected.Equals(actual);
-        }
     }
 }
 
