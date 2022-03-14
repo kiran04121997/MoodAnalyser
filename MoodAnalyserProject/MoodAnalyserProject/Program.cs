@@ -10,7 +10,7 @@ namespace MoodAnalyserProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("MoodANalyser");
+            Console.WriteLine("MoodAnalyser");
             Console.ReadLine();
         }
     }
