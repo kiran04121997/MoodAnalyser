@@ -13,7 +13,7 @@ namespace MoodAnalyserTesting
         {
             ///Follow AAA strategy
             ///Arrange , Act and in last Assert
-            AnalyzeMood mood = new AnalyzeMood("I am in Happy Mood");
+            AnalyseMood mood = new AnalyseMood("I am in Happy Mood");
             string excepted = "happy";
             var actual = mood.Mood();
             Assert.AreEqual(excepted, actual);
@@ -24,7 +24,7 @@ namespace MoodAnalyserTesting
         {
             ///Follow AAA strategy
             ///Arrange , Act and in last Assert
-            AnalyzeMood mood = new AnalyzeMood("I am in SAD Mood");
+            AnalyseMood mood = new AnalyseMood("I am in SAD Mood");
             string excepted = "sad";
             var actual = mood.Mood();
             Assert.AreEqual(excepted, actual);
@@ -39,10 +39,10 @@ namespace MoodAnalyserTesting
             string excepted = "Message cann't be null";
             try
             {
-                AnalyzeMood mood = new AnalyzeMood(message);
+                AnalyseMood mood = new AnalyseMood(message);
                 string actual = mood.Mood();
             }
-            catch (MoodAnalyzerException ex)
+            catch (MoodAnalyserException ex)
             {
                 Console.WriteLine("Custom Exception :" + ex);
                 Assert.AreEqual(excepted, ex.Message);
@@ -62,10 +62,10 @@ namespace MoodAnalyserTesting
             string excepted = "Message cann't be Empty";
             try
             {
-                AnalyzeMood mood = new AnalyzeMood(message);
+                AnalyseMood mood = new AnalyseMood(message);
                 string actual = mood.Mood();
             }
-            catch (MoodAnalyzerException ex)
+            catch (MoodAnalyserException ex)
             {
                 Console.WriteLine("Custom Exception :" + ex);
                 Assert.AreEqual(excepted, ex.Message);
