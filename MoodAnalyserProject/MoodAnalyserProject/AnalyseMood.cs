@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyserProject
 {
-    public class AnalyzeMood
+    public class AnalyseMood
     {
         //variable
         public string message;
         //parameterized constructor
-        public AnalyzeMood(string message)
+        public AnalyseMood(string message)
         {
             this.message = message;
         }
@@ -27,7 +27,7 @@ namespace MoodAnalyserProject
                 }
                 else if (message.Equals(string.Empty))
                 {
-                    throw new MoodAnalyzerException(MoodAnalyzerException.ExceptionType.EMPTY_EXCEPTION, "Message cann't be Empty");
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_EXCEPTION, "Message cann't be Empty");
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace MoodAnalyserProject
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("Default Exception: " + ex.Message);
-                throw new MoodAnalyzerException(MoodAnalyzerException.ExceptionType.NULL_EXCEPTION, "Message cann't be null");
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_EXCEPTION, "Message cann't be null");
 
             }
         }
