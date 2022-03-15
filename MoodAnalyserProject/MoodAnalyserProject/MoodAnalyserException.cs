@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyserProject
 {
-    public class MoodAnalyzerException : Exception
+    public class MoodAnalyserException : Exception
     {
         public ExceptionType type;
         //Enumeration
@@ -16,7 +16,7 @@ namespace MoodAnalyserProject
             EMPTY_EXCEPTION
         }
         //Exception Constructor.
-        public MoodAnalyzerException(ExceptionType type, string message) : base(message)
+        public MoodAnalyserException(ExceptionType type, string message) : base(message)
         {
             this.type = type;
         }
